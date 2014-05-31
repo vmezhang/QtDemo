@@ -4,13 +4,10 @@
 #include <QtGui>
 #include <QDialog>
 #include <QWidget>
-#include <QDateTime>
-#include <QDateEdit>
+#include <QDate>
 #include <QLabel>
-#include <QTcpSocket>
+#include <QtNetwork/QTcpSocket>
 #include <QDialogButtonBox>
-#include <QDateEdit>
-#include <QTimeEdit>
 #include <QComboBox>
 #include <QProgressBar>
 #include <QTableWidget>
@@ -20,7 +17,7 @@ namespace Ui {
 class TripPlanner;
 }
 
-class TripPlanner : public QDialog, private Ui::TripPlanner
+class TripPlanner : public QDialog
 {
     Q_OBJECT
     

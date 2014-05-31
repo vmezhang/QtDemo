@@ -1,3 +1,5 @@
+QT += network
+
 FORMS += \
     tripplanner.ui
 
@@ -5,4 +7,5 @@ HEADERS += \
     TripPlanner.h
 
 SOURCES += \
-    TripPlanner.cpp
+    TripPlanner.cpp \
+    TripPlannerMain.cpp
