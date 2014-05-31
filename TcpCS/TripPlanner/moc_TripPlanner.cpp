@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'TripPlanner.h'
 **
-** Created: Sat May 31 13:18:37 2014
+** Created: Sat May 31 21:29:43 2014
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -36,7 +36,7 @@ static const uint qt_meta_data_TripPlanner[] = {
       45,   12,   12,   12, 0x08,
       65,   12,   12,   12, 0x08,
       78,   12,   12,   12, 0x08,
-     104,   12,   12,   12, 0x08,
+     105,   12,   12,   12, 0x08,
 
        0        // eod
 };
@@ -44,7 +44,7 @@ static const uint qt_meta_data_TripPlanner[] = {
 static const char qt_meta_stringdata_TripPlanner[] = {
     "TripPlanner\0\0connectToServer()\0"
     "sendRequest()\0updateTableWidget()\0"
-    "stopSearch()\0connectionCloseByServer()\0"
+    "stopSearch()\0connectionClosedByServer()\0"
     "error()\0"
 };
 
@@ -58,7 +58,7 @@ void TripPlanner::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 1: _t->sendRequest(); break;
         case 2: _t->updateTableWidget(); break;
         case 3: _t->stopSearch(); break;
-        case 4: _t->connectionCloseByServer(); break;
+        case 4: _t->connectionClosedByServer(); break;
         case 5: _t->error(); break;
         default: ;
         }

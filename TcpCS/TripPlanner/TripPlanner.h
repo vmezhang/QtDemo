@@ -1,56 +1,40 @@
 #ifndef TRIPPLANNER_H
 #define TRIPPLANNER_H
 
-#include <QtGui>
 #include <QDialog>
-#include <QWidget>
-#include <QDate>
-#include <QLabel>
-#include <QtNetwork/QTcpSocket>
-#include <QDialogButtonBox>
-#include <QComboBox>
-#include <QProgressBar>
-#include <QTableWidget>
-#include <QRadioButton>
+#include <QTcpSocket>
+
+#include "ui_tripplanner.h"
+
+class QPushButton;
 
 namespace Ui {
 class TripPlanner;
 }
 
-class TripPlanner : public QDialog
+class TripPlanner : public QDialog, private Ui::TripPlanner
 {
     Q_OBJECT
     
 public:
     explicit TripPlanner(QWidget *parent = 0);
-    ~TripPlanner();
 
 private slots:
     void connectToServer();
     void sendRequest();
     void updateTableWidget();
     void stopSearch();
-    void connectionCloseByServer();
+    void connectionClosedByServer();
     void error();
     
 private:
-    Ui::TripPlanner *ui;
-
     void closeConnection();
 
-    QDialogButtonBox *buttonBox;
-    QDateEdit *dateEdite;
-    QTimeEdit *timeEdite;
-    QProgressBar *progressBar;
-    QTableWidget *tableWidget;
     QPushButton *searchButton;
     QPushButton *stopButton;
-    QLabel *statusLable;
     QTcpSocket tcpSocket;
     quint16 nextBlockSize;
-    QComboBox *fromComboBox;
-    QComboBox *toComboBox;
-    QRadioButton *departureRadioButton;
+
 };
 
 #endif // TRIPPLANNER_H

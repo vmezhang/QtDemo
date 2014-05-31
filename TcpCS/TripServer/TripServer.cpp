@@ -1,3 +1,4 @@
+#include "ClientSocket.h"
 #include "TripServer.h"
 
 TripServer::TripServer(QObject *parent):QTcpServer(parent)

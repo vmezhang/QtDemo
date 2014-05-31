@@ -1,3 +1,5 @@
+#include <QtNetwork>
+
 #include "ClientSocket.h"
 
 ClientSocket::ClientSocket(QObject *parent):QTcpSocket(parent)

@@ -1,9 +1,10 @@
 #ifndef CLIENTSOCKET_H
 #define CLIENTSOCKET_H
 
-#include <QDate>
-#include <QtNetwork/QTcpSocket>
-#include <QtNetwork/QTcpServer>
+#include <QTcpSocket>
+
+class QDate;
+class QTime;
 
 class ClientSocket:public QTcpSocket
 {

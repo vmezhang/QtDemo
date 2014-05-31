@@ -1,8 +1,7 @@
 #ifndef TRIPSERVER_H
 #define TRIPSERVER_H
 
-#include "ClientSocket.h"
-
+#include <QTcpServer>
 
 class TripServer:public QTcpServer
 {
